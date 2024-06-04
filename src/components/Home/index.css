@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.cart-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+}
+.menus {
+  list-style-type: none;
+  display: flex;
+  flex-grow: 1;
+  overflow-x: scroll;
+  width: 100%;
+}
+.dishes {
+  width: 100%;
+}

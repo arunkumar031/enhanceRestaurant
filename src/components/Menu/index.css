@@ -1,0 +1,14 @@
+.menu {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  width: 250px;
+}
+.active-menu {
+  border-bottom: 2px orange solid;
+  color: orange;
+}
