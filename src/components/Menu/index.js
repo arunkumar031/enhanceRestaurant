@@ -7,15 +7,13 @@ const Menu = props => {
     onClickMenu(menuDetails.menu_category_id)
   }
   return (
-    <li>
-      <button
-        type="button"
-        className={`menu ${activeMenu}`}
-        onClick={onClickMenuBtn}
-      >
-        {menuDetails.menu_category}
-      </button>
-    </li>
+    <button
+      type="button"
+      className={`menu ${activeMenu}`}
+      onClick={onClickMenuBtn}
+    >
+      {menuDetails.menu_category}
+    </button>
   )
 }
 

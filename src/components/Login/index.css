@@ -1,0 +1,33 @@
+.login-page {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(245, 224, 200);
+}
+.login-form {
+  border-radius: 10px;
+  background-color: aliceblue;
+  padding: 30px;
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.input-container {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.input {
+  margin-left: 40px;
+  width: 70%;
+}
+.login-btn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  align-self: center;
+  width: 80px;
+  height: 30px;
+}

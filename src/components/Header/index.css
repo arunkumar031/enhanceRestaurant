@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.cart-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+}
+.cart-count {
+  color: rgb(247, 6, 162);
+  background-color: rgb(245, 170, 216);
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+}
+.logout-btn {
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: rgb(156, 238, 238);
+}

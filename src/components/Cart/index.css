@@ -1,0 +1,23 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.cart-list {
+  list-style-type: none;
+  width: 100%;
+  margin-left: 0;
+}
+.remove-all-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgb(212, 215, 218);
+  align-self: flex-end;
+}
+.empty-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

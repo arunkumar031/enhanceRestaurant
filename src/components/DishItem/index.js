@@ -20,27 +20,14 @@ class DishItem extends Component {
     return (
       <CartContext.Consumer>
         {value => {
-          const {
-            addCartItem,
-            cartList,
-            incrementCartItemQuantity,
-            decrementCartItemQuantity,
-          } = value
+          const {addCartItem} = value
 
           const {dishDetails} = this.props
           const {quantity} = this.state
           const item = {...dishDetails, quantity}
-          const cartItem = cartList.find(each => each.dish_id === item.dish_id)
+
           const onClickAddToCart = () => {
             addCartItem(item)
-          }
-
-          const increaseDishQuantity = () => {
-            addCartItem({...item, quantity: 1})
-          }
-
-          const decreaseDishQuantity = () => {
-            decrementCartItemQuantity(item.dish_id)
           }
 
           const dishTypeContainer =
@@ -66,24 +53,20 @@ class DishItem extends Component {
                         <button
                           className="minus-plus-btn"
                           type="button"
-                          onClick={
-                            cartList.length
-                              ? decreaseDishQuantity
-                              : this.decreaseDishQuantity
-                          }
+                          onClick={this.decreaseDishQuantity}
                         >
                           -
                         </button>
-                        <p>{cartItem ? cartItem.quantity : item.quantity}</p>
+                        <p>{quantity}</p>
                         <button
                           className="minus-plus-btn"
                           type="button"
-                          onClick={increaseDishQuantity}
+                          onClick={this.increaseDishQuantity}
                         >
                           +
                         </button>
                       </div>
-                      {quantity < 0 ? (
+                      {quantity > 0 ? (
                         <button
                           className="add-to-cart-btn"
                           type="button"

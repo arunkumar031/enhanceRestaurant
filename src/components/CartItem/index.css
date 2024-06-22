@@ -1,0 +1,27 @@
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(252, 255, 255);
+  border-radius: 10px;
+  width: 100%;
+}
+.item-img {
+  width: 100px;
+  height: 100px;
+}
+.quantity-controller-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quantity-controller-btn {
+  background-color: aliceblue;
+  font-size: 24px;
+}
+.remove-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgb(212, 215, 218);
+}

@@ -1,6 +1,12 @@
 import {Component} from 'react'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+
 import CartContext from './context/cartContext'
+import Login from './components/Login'
 import Home from './components/Home'
+import Cart from './components/Cart'
+import ProtectedRoute from './components/ProtectedRoute'
+
 import './App.css'
 
 // write your code here
@@ -16,8 +22,6 @@ class App extends Component {
     const {quantity} = item
 
     const itemPresent = cartList.find(each => each.dish_id === item.dish_id)
-    console.log(cartList)
-    console.log(itemPresent)
     if (itemPresent === undefined) {
       this.setState(prevState => ({
         cartList: [...prevState.cartList, item],
@@ -46,7 +50,7 @@ class App extends Component {
     const {cartList} = this.state
     const cartItem = cartList.find(each => each.dish_id === id)
     const {quantity} = cartItem
-    const updatedCartItem = {...cartItem, quantity}
+    const updatedCartItem = {...cartItem, quantity: quantity + 1}
     this.setState(prevState => ({
       cartList: [
         ...prevState.cartList.filter(each => each.dish_id !== id),
@@ -85,7 +89,13 @@ class App extends Component {
           decrementCartItemQuantity: this.decrementCartItemQuantity,
         }}
       >
-        <Home />
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/login" component={Login} />
+            <ProtectedRoute exact path="/" component={Home} />
+            <ProtectedRoute exact path="/cart" component={Cart} />
+          </Switch>
+        </BrowserRouter>
       </CartContext.Provider>
     )
   }
