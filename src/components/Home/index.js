@@ -51,7 +51,7 @@ class Home extends Component {
   menus = () => {
     const {menuList, activeMenuId} = this.state
     return (
-      <div className="menus">
+      <div className='menus'>
         {menuList.map(each => (
           <Menu
             key={each.menu_category_id}
@@ -67,7 +67,7 @@ class Home extends Component {
   dishes = () => {
     const {dishesList} = this.state
     return (
-      <ul className="dishes">
+      <ul className='dishes'>
         {dishesList.map(each => (
           <DishItem key={each.dish_id} dishDetails={each} />
         ))}
