@@ -24,6 +24,8 @@ class Login extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
+    console.log(response)
+    console.log(data)
     if (response.ok) {
       const {history} = this.props
       const jwtToken = data.jwt_token
@@ -64,11 +66,11 @@ class Login extends Component {
             />
           </div>
           <div className="input-container">
-            <label htmlFor="password">PASSWORD</label>
+            <label htmlFor="pass">PASSWORD</label>
             <input
               placeholder="PASSWORD"
               value={password}
-              id="password"
+              id="pass"
               type={passwordType}
               onChange={this.onChangePassword}
               className="input"

@@ -31,7 +31,7 @@ const CartItem = props => (
             alt={itemDetails.dish_name}
             className="item-img"
           />
-          <h1>{itemDetails.dish_name}</h1>
+          <p>{itemDetails.dish_name}</p>
           <div className="quantity-controller-container">
             <button
               className="quantity-controller-btn"
